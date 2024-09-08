@@ -33,6 +33,6 @@ public class SimpleViewController: UIViewController {
         tapButton.backgroundColor = color
     }
     public func changeButtonText(to text: String) {
-        tapButton.setTitle("Tap Me", for: .normal)
+        tapButton.setTitle(text, for: .normal)
     }
 }
