@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SimpleViewController: UIViewController {
+public class SimpleViewController: UIViewController {
     
     @IBOutlet private var tapButton: UIButton!
     override func viewDidLoad() {
