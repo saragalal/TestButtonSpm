@@ -18,7 +18,8 @@ let package = Package(
         .target(
             name: "testframework",
             resources: [
-                .process("Resources/SimpleViewController.xib") // Add your xib file here
+                .process("Resources/SimpleViewController.xib"), // Add your xib file here
+                    .process("Resources/Storyboard.storyboard")
             ]
         ),
         .testTarget(
