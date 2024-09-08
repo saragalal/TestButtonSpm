@@ -16,7 +16,7 @@ public class TestViewController: UIViewController {
     }
     // Initialize the view controller using the storyboard
         public static func instantiateFromStoryboard() -> TestViewController {
-            let storyboard = UIStoryboard(name: "StoryBoard", bundle: Bundle.module)
+            let storyboard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
             let viewController = storyboard.instantiateViewController(withIdentifier: "testView") as! TestViewController
             return viewController
         }
