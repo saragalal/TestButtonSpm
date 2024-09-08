@@ -9,7 +9,7 @@ import UIKit
 
 public class SimpleViewController: UIViewController {
     
-    @IBOutlet private var tapButton: UIButton!
+    @IBOutlet private weak var tapButton: UIButton!
     public override func viewDidLoad() {
         super.viewDidLoad()
         
