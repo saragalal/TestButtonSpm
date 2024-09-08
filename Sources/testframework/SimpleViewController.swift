@@ -10,7 +10,7 @@ import UIKit
 public class SimpleViewController: UIViewController {
     
     @IBOutlet private var tapButton: UIButton!
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
       }
