@@ -12,7 +12,7 @@ public class SimpleViewController: UIViewController {
     @IBOutlet private var tapButton: UIButton!
     public override func viewDidLoad() {
         super.viewDidLoad()
-        setupButton()
+        
       }
     // Load the view from the .xib file
         public init() {
@@ -22,7 +22,10 @@ public class SimpleViewController: UIViewController {
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
-    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupButton()
+    }
     private func setupButton() {
         tapButton.setTitle("Tap Me", for: .normal)
         tapButton.backgroundColor = .purple
