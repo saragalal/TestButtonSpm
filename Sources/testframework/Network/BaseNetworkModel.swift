@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CoreNetworkModel<T: Decodable>: Decodable {
+public class CoreNetworkModel<T: Decodable>: Decodable {
     var status: Int?
     private (set) var data: T?
     var isSuccess: Bool?

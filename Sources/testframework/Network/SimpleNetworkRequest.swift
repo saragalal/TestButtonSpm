@@ -11,12 +11,12 @@ import Alamofire
 import UIKit
 
 public struct SimpleNetworkRequest: IndependentNetworkRequestProtocol {
-    let url: String
-    let method: HttpMethod
-    let parameters: [String: Any]
-    let parameterEncoding: ParametersEncoding
-    let headers: [String: String]
-    let images: [UIImage]?
+  public let url: String
+  public let method: HttpMethod
+  public let parameters: [String: Any]
+  public let parameterEncoding: ParametersEncoding
+  public let headers: [String: String]
+  public let images: [UIImage]?
     // TODO: - check using uiimage in network layer with samar
     public init(url: String, method: HttpMethod = .get,
          parameters: [String: Any] = [:], parameterEncoding: ParametersEncoding = .urlEncoding,
@@ -39,7 +39,7 @@ public protocol IndependentNetworkRequestProtocol: BaseNetworkRequest {
     var images: [UIImage]? { get }
 }
 
-extension IndependentNetworkRequestProtocol {
+public extension IndependentNetworkRequestProtocol {
     var parameterEncoding: ParametersEncoding {
         return .urlEncoding
     }
@@ -57,7 +57,7 @@ extension IndependentNetworkRequestProtocol {
     }
 }
 
-extension IndependentNetworkRequestProtocol {
+public extension IndependentNetworkRequestProtocol {
     func getHTTPMethod() -> HTTPMethod {
         return method.alamofireMethod
     }

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import UIKit
 /// protocol of the base network request used in the network layer
-protocol BaseNetworkRequest {
+public protocol BaseNetworkRequest {
     
     /// - Returns: Should return the method used in the request ( post, get, ... )
     func getHTTPMethod() -> Alamofire.HTTPMethod
