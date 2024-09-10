@@ -6,9 +6,12 @@
 //
 
 import UIKit
+//import testframework
 
 class ViewController: UIViewController {
-
+    
+    var network = NetworkManager.shared()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

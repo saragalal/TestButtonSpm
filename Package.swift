@@ -14,12 +14,12 @@ let package = Package(
             name: "testframework",
             targets: ["testframework"]),
     ],
+    dependencies: [.package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.0"),],
     targets: [
         .target(
             name: "testframework",
-            resources: [
-                .process("Resources/SimpleViewController.xib"), // Add your xib file here
-                    .process("Resources/Storyboard.storyboard")
+            dependencies: [
+                "Alamofire"
             ]
         ),
         .testTarget(
