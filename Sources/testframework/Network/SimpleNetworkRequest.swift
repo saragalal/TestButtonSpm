@@ -9,7 +9,8 @@
 import Foundation
 import Alamofire
 import UIKit
-struct SimpleNetworkRequest: IndependentNetworkRequestProtocol {
+
+public struct SimpleNetworkRequest: IndependentNetworkRequestProtocol {
     let url: String
     let method: HttpMethod
     let parameters: [String: Any]
@@ -17,7 +18,7 @@ struct SimpleNetworkRequest: IndependentNetworkRequestProtocol {
     let headers: [String: String]
     let images: [UIImage]?
     // TODO: - check using uiimage in network layer with samar
-    init(url: String, method: HttpMethod = .get,
+    public init(url: String, method: HttpMethod = .get,
          parameters: [String: Any] = [:], parameterEncoding: ParametersEncoding = .urlEncoding,
          headers: [String: String] = [:], images: [UIImage]? = nil) {
         self.url = url
@@ -29,7 +30,7 @@ struct SimpleNetworkRequest: IndependentNetworkRequestProtocol {
     }
 }
 
-protocol IndependentNetworkRequestProtocol: BaseNetworkRequest {
+public protocol IndependentNetworkRequestProtocol: BaseNetworkRequest {
     var url: String { get }
     var method: HttpMethod { get }
     var parameterEncoding: ParametersEncoding { get }
@@ -82,7 +83,7 @@ extension IndependentNetworkRequestProtocol {
     }
 }
 
-enum HttpMethod {
+public enum HttpMethod {
     case options
     case get
     case head
@@ -109,7 +110,7 @@ enum HttpMethod {
     
 }
 
-enum ParametersEncoding {
+public enum ParametersEncoding {
     case jsonDefault
     case urlEncoding
     case urlEncodingToQueryString

@@ -73,17 +73,17 @@ public class NetworkManager {
         sharedNetworkManager
     }
     
-    func makeSimpleGetRequest(url: URL, completion: @escaping (Data?) -> Void) {
+    public func makeSimpleGetRequest(url: URL, completion: @escaping (Data?) -> Void) {
         AF.request(url).validate().response { response in
             completion(response.data)
         }
     }
     
-    func makeRequest<T: Decodable>(_ request: BaseNetworkRequest, handler: @escaping (CoreNetworkModel<T>) -> Void) {
+    public func makeRequest<T: Decodable>(_ request: BaseNetworkRequest, handler: @escaping (CoreNetworkModel<T>) -> Void) {
         executeCoreModelDecodedRequest(request, useInterceptor: true, completion: handler)
     }
 
-    func makeRequest<T: Decodable>(_ request: BaseNetworkRequest, handler: @escaping (T?, String?) -> Void) {
+    public func makeRequest<T: Decodable>(_ request: BaseNetworkRequest, handler: @escaping (T?, String?) -> Void) {
         executeDecodableRequest(request, useInterceptor: true, completion: handler)
     }
 
