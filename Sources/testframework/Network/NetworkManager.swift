@@ -201,7 +201,8 @@ public class NetworkManager {
                // dLog(description)
             }
         
-        return request.validate()
+        return request
+            // .validate()
     }
 }
 // swiftlint:enable force_unwrapping
